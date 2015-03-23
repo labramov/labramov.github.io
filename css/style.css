@@ -1,0 +1,214 @@
+/*
+***********************
+(c) Lev Abramov, 2010
+abramov91(at)gmail.com
+http://lev-a.spb.ru
+***********************
+*/ 
+
+/* Reset */
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	}
+
+/* Generel */
+body {  
+    background-color:#7B746A;  
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#616265;  
+} 
+.fon {
+	width: 100%;
+	border: 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+#idontcare {
+	z-index:1;
+	position: absolute;
+	left: 5px;
+	top: 5px;  
+	color:#C8C5C3;
+}
+.list {
+	list-style-type: circle;
+	font-size:12px;
+	margin:5px 10px; padding:3px 10px; 
+	position:relative;
+	top:-10px;
+}
+
+.list li{
+	margin-top:3px;
+	}	
+a {  
+    text-decoration:none;  
+    color:#fff;  
+}  
+a:hover {  
+    text-decoration:none;  
+    color:#fff;
+	border-bottom: thin dotted;	 
+}  
+a:active {
+	color:#7B746A;
+}
+a.out,a.iframe {
+	color:#757575;
+	border-bottom:dashed thin;
+}
+a:hover.out,a:hover.iframe {
+	color:#fff;
+	background-color:#7B746A;
+	border: hidden;
+}
+
+a, img { outline: none; }
+
+a#footer{
+	color:#C8C5C3;
+}
+
+/* Card background */
+#card { 
+	background: url(../img/card.png) no-repeat 50%;
+	margin-top: 7%;
+	min-height: 300px;
+}  
+
+/* menu  */ 
+ul#menu {   
+    position:relative;
+	top: 37px;
+	left: -60px;
+	width: 350px; 
+}  
+ul#menu li {  
+    margin:0px; padding:0px;  
+    list-style:none;
+	margin-right: 15px;  
+    font-size:12px;  
+    text-transform:uppercase;  
+    display:inline;  
+	} 
+	 
+	
+/* Info positioning */
+#info {
+	position: relative;
+	top: 65px;
+	width: 350px;
+	max-height: 180px;
+	overflow: hidden;
+	text-align: justify;
+}
+
+/* Image mouseover fade*/
+div.fadehover {
+	position: relative;
+	left: 260px;
+	}
+img.a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+img.b {
+	position: absolute;
+	left: 0;
+	top: 0;
+	}
+ 
+	
+/* Tooltip */
+#contacts {
+	position:relative;
+	top:75px;
+	left:45px;
+	border:0;
+	cursor:pointer;
+	margin:0px;
+}
+
+#contacts img{
+	margin: 0px 15px;	
+}
+	
+#tip {
+	position:absolute;
+	top:30%;
+    display:none; 
+    background:transparent url(../img/tip.png); 
+    font-size:13px; 
+    height:61px; 
+    width:170px; 
+    padding:0px; 
+    color:#fff;     
+}
+
+div.tip {
+	position:relative;
+	top:22px;
+	left:0px;
+	text-align:center;
+	color:gray;	
+}
+
+/* Networks */
+dt{
+	display:inline;}
+dd{
+	color:#999;
+	display:inline;
+	text-transform:lowercase;}
+dl#net dt{
+	 padding:2px 0 2px 24px;}
+dt#vk{
+	background:url(../img/vk.png) no-repeat;}
+dt#facebook{
+	background:url(../img/facebook.png) no-repeat;}
+dt#last{
+	background:url(../img/last.png) no-repeat;}
+dt#wakoopa{
+	background:url(../img/wakoopa.png) no-repeat;}
+dt#habr{
+	background:url(../img/habrahabr.png) no-repeat;}	
+dt#flickr{
+	background:url(../img/flickr.png) no-repeat;}
+	
+dd.clear{
+	display:block;
+	clear:both;}
+dl#net{
+	position:relative;
+	top:15px;
+	left:30px;	
+}
+dl#net dd.clear{
+	height:5px;}
+
+
+#footer {
+	font-size:11px;
+	position:relative;
+	color:#C8C5C3;
+}
+/* Checkbox */
+#checkbox {
+	font-size:10,5px;
+	position:relative;
+	color:#988d8d;
+}
+.checkbox {
+	position: relative;
+	width: 19px;
+	height: 25px;
+	padding: 0 20px 0px 0;
+	background: url(../img/checkbox.png) no-repeat;
+	}

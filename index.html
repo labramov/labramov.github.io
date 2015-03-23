@@ -1,0 +1,230 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+        <title>Lev Abramov</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="turn/turn.css">
+		
+		<!-- <link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.1.css" type="text/css" media="screen" /> -->
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/queryLoader.css" type="text/css" />
+		<script type='text/javascript' src='js/queryLoader.js'></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/jquery.tabSwitch.yui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.tools.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.1.pack.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+		
+
+		<!-- Fade effect -->
+		<script type="text/javascript">
+			$(function(){
+				$('.SlideTab').tabSwitch('create', {type: 'toggle', toggle: 'toggle', height: 180, width: 350});
+				$('.tabSelect').click(function(e){
+					$('.SlideTab').tabSwitch('moveTo',{index: parseInt($(this).attr("rel"))});
+					e.preventDefault();
+				});
+				$('.Nav').click(function(e){
+					$('.SlideTab').tabSwitch('moveStep',{step: parseInt($(this).attr("rel"))});
+					e.preventDefault();
+				});
+			});
+		</script>
+		
+		<!-- Photo transformation -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+			$("img.a").hover(
+			function() {
+			$(this).stop().animate({"opacity": "0"}, "slow");
+			},
+			function() {
+			$(this).stop().animate({"opacity": "1"}, "slow");
+			});
+			 
+			});
+		</script>
+		
+		<!-- Tooltip -->
+		<script type="text/javascript"> 
+			$(document).ready(function() { 
+    			$("#contacts img[title]").tooltip({tip: '#tip', effect: 'slide'}); 
+			});
+		</script>
+		
+		<!-- FancyBox-->
+		<!-- <script type="text/javascript">
+			$(document).ready(function() {
+				
+				/* Using custom settings */
+				
+				$("a.iframe").fancybox({
+					'transitionIn'	:	'elastic',
+					'transitionOut'	:	'fade',
+					'speedIn'		:	800, 
+					'speedOut'		:	200,
+					'width'			:   '90%',
+		            'height'	    :   '80%',
+				});
+		
+			
+			});
+		</script>
+		
+		-->
+		<!-- Secret code -->
+		<script type="text/javascript">
+			// check to make sure that the browser can handle window.addEventListener
+			if (window.addEventListener) {
+				// create the keys and konami variables
+				var keys = [],
+					konami = "38,38,40,40,37,39,37,39,66,65";
+				
+				// bind the keydown event to the Konami function
+				window.addEventListener("keydown", function(e){
+					// push the keycode to the 'keys' array
+					keys.push(e.keyCode);
+					
+					// and check to see if the user has entered the Konami code
+					if (keys.toString().indexOf(konami) >= 0) {
+						//Just test 
+						//alert('Konami');
+						
+						document.getElementById("fon").setAttribute("src", "img/remmus.jpg");
+							 
+						
+						// and finally clean up the keys array
+						keys = [];
+					};
+				}, true);
+			};
+			
+		</script> 
+		
+		<!--[if lte IE 7]>
+			<meta http-equiv="refresh" content="0; url=/ie6.html" />
+			<script type="text/javascript">
+				/* <![CDATA[ */
+				window.top.location = 'noie/';
+				/* ]]> */
+			</script>
+		<![endif]-->
+		
+    </head>
+    <body>
+		<span id="idontcare" onclick="this.innerHTML = 'Thanks for indifference!';"><img src="img/like.png" style="cursor: pointer;"></span>
+    	<p><img id="fon" class="fon" src="img/summer.jpg" /></p>
+		<!-- CONTENT  -->
+    	<div id="card" align="center">
+    		<!-- menu links -->
+			<ul id="menu">
+	    		<li><a class="tabSelect" href="#about" rel="0">about</a></li>
+				<li><a class="tabSelect" href="#contacts" rel="1">contacts</a></li>
+				<li><a class="tabSelect" href="#networks" rel="2">networks</a></li>
+			</ul>
+			
+    		<div id="info">
+	    		<!-- Default tab 	    		
+					div class="SlideTab" id="Tab0">
+	    			<img src="img/name.png" alt="Lev Abramov" style="position:relative; top:75px; left:45px;">
+				</div>-->
+
+				
+				<!-- About -->
+				<div class="SlideTab" id="about">
+		    		<div class="fadehover" align="right">
+						<img src="img/portrait-bw.jpg" alt="" class="a" >
+						<img src="img/portrait.jpg" alt="" class="b" >
+					</div>
+					
+					<p style="max-width:245px;" id="imanok">«Hello» <br><br> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p><br>
+					
+					<!--
+					<div style="position:relative; top:-7px;">
+						<b>Education</b>
+						<ul class="list">
+							<li>1998&ndash;08  &nbsp; &nbsp;&mdash; <a href="http://360spb.edusite.ru" class="iframe" onClick="javascript: pageTracker._trackPageview('/out/360school');">360</a>, <a href="http://207school.spb.ru" class="iframe" onClick="javascript: pageTracker._trackPageview('/out/207school');">207</a> schools</li>
+							<li>2005&ndash;06  &nbsp; &nbsp;&mdash; PС maintenance courses</li>
+							<li>2005&ndash;08  &nbsp; &nbsp;&mdash; <a href="http://fotooknospb.ru" class="iframe" onClick="javascript: pageTracker._trackPageview('/out/fotooknospb');">Art photography courses</a></li>
+							<li>2008&ndash;now &mdash;  <a href="http://voenmeh.ru" class="iframe" onClick="javascript: pageTracker._trackPageview('/out/voenmeh');">BSTU "Voenmeh"</a></li>
+						</ul>
+						<div style="position:relative; top:-10px;">
+						<b>Hobbies</b>
+						<ul class="list">
+							<li>Photography</li>
+							<li>Сycling</li>
+							<li style="visibility:hidden;">Poker</li>
+						</ul>
+						</div>
+					</div>-->
+				</div>
+				
+				<!-- Contacts -->
+				<div class="SlideTab" id="contacts">
+				Get in touch!
+		    		<div id="contacts">
+						<img src="img/gmail.png" alt="GMail" title="<div class='tip'>abramov91@gmail.com</div>" width="56px" height="56px">
+						<img src="img/skype.png" alt="Skype" title="<div class='tip'>labramov</div>" width="56px" height="56px">
+						<img src="img/phone.png" alt="Mobile phone" title="<div class='tip'>+7 904 338-61-87</div>" width="56px" height="56px">
+					</div>
+				</div>
+				<!-- Networks -->
+				<div class="SlideTab" id="networks">
+	    			You can find me on following social netwoks:<br><font size="-3px">(links will be opened in a new tab/window)</font>
+					<dl id="net">
+		              <dd class="clear"></dd> 
+		              <dt id="vk"><a href="http://www.vk.com/lev.abramov" class="out" target="_blank" onClick="javascript: pageTracker._trackPageview('/out/vkontakte');">Vkontakte</a></dt>        
+		              <dd>lev.abramov</dd> 
+		              <dd class="clear"></dd> 
+		              <dt id="facebook"><a href="http://www.facebook.com/lev.abramov" class="out" target="_blank" javascript: pageTracker._trackPageview('/out/facebook');">Facebook</a></dt>        
+		              <dd>lev.abramov</dd>  
+					  <dd class="clear"></dd>  
+					  <dt id="flickr"><a href="http://www.flickr.com/photos/44353053@N08/" class="out" target="_blank" onClick="javascript: pageTracker._trackPageview('/out/flickr');">Flickr</a></dt>        
+		              <dd>lev-a</dd> 
+		              <dd class="clear"></dd>
+					  <dt id="last"><a href="http://www.last.fm/user/lev-a/" class="out" target="_blank" onClick="javascript: pageTracker._trackPageview('/out/lastfm');">Last.fm</a></dt>        
+		              <dd>lev-a</dd> 
+					  <dd class="clear"></dd> 
+		              <dt id="wakoopa"><a href="http://wakoopa.com/levchik" class="out" target="_blank" onClick="javascript: pageTracker._trackPageview('/out/wakoopa');">Wakoopa</a></dt>        
+		              <dd>levchik</dd> 
+		              <dd class="clear"></dd> 
+					  <dt id="habr"><a href="http://levchik.habr.ru/" class="out" target="_blank" onClick="javascript: pageTracker._trackPageview('/out/habr');">Habrahabr</a></dt>        
+		              <dd>levchik</dd> 
+		              <dd class="clear"></dd> 
+					</dl> 
+				</div>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+	<br><br>
+	<div id="footer" align="center">
+				© Lev Abramov 1991-2011 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp <a href="http://timvandamme.com/wall-of-fame" target="_blank" id="footer" onClick="javascript: pageTracker._trackPageview('/out/inspiration');">inspiration </a>
+	</div>
+	
+	<div id="tip">&nbsp;</div>	
+	
+	<!--  Google Analytics -->
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-5032578-1");
+		pageTracker._setDomainName(".lev-a.spb.ru");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+	
+	<script type='text/javascript'>
+		QueryLoader.init();
+	</script>
+    </body>
+</html>
